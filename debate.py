@@ -198,16 +198,16 @@ graph = builder.compile()
 
 if __name__ == "__main__":
     TOPIC = os.getenv("TOPIC")
-    max_rounds = 3
+    ROUND = os.getenv("ROUND")
     print(f"=== 辯論開始 ===")
     print(f"主題：{TOPIC}")
-    print(f"總輪數：{max_rounds}\n")
+    print(f"總輪數：{ROUND}\n")
 
     initial_state = {
         "topic": TOPIC,
         "messages": [],
         "round_count": 1,
-        "max_rounds": max_rounds,
+        "max_rounds": ROUND,
         "current_speaker": "init",
         "final_report": ""
     }
